@@ -62,6 +62,7 @@ const server = net.createServer((socket) => {
 });
 
 // Grab an arbitrary unused port.
-server.listen(3040, () => {
+const PORT = process.env.PORT || 3040;
+server.listen(PORT, () => {
     console.log('Server information: ', server.address());
 });
